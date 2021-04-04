@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package
+			uri = "http://www.minres.com/uarchdsl/UArchDsl"
+			class = "com.minres.uarchdsl.uArchDsl.UArchDslPackage"
+			genModel = "model/generated/UArchDsl.genmodel" />
+	</extension>
+</plugin>

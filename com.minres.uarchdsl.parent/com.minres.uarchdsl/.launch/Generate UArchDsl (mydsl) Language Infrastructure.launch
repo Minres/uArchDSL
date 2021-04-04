@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.emf.mwe2.launch.Mwe2LaunchConfigurationType">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/com.minres.uarchdsl"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.debug.core.ATTR_REFRESH_SCOPE" value="${working_set:&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;resources&gt;&#10;&lt;item path=&quot;/com.minres.uarchdsl.parent&quot; type=&quot;4&quot;/&gt;&#10;&lt;item path=&quot;/com.minres.uarchdsl&quot; type=&quot;4&quot;/&gt;&#10;&lt;item path=&quot;/com.minres.uarchdsl.ide&quot; type=&quot;4&quot;/&gt;&#10;&lt;item path=&quot;/com.minres.uarchdsl.ui&quot; type=&quot;4&quot;/&gt;&#10;&lt;item path=&quot;/com.minres.uarchdsl.web&quot; type=&quot;4&quot;/&gt;&#10;&lt;item path=&quot;/com.minres.uarchdsl.target&quot; type=&quot;4&quot;/&gt;&#10;&lt;item path=&quot;/com.minres.uarchdsl.feature&quot; type=&quot;4&quot;/&gt;&#10;&lt;item path=&quot;/com.minres.uarchdsl.repository&quot; type=&quot;4&quot;/&gt;&#10;&lt;item path=&quot;/com.minres.uarchdsl.tests&quot; type=&quot;4&quot;/&gt;&#10;&lt;item path=&quot;/com.minres.uarchdsl.ui.tests&quot; type=&quot;4&quot;/&gt;&#10;&lt;item path=&quot;/com.minres.uarchdsl.tests&quot; type=&quot;4&quot;/&gt;&#10;&lt;item path=&quot;/com.minres.uarchdsl.ui.tests&quot; type=&quot;4&quot;/&gt;&#10;;&lt;/resources&gt;}"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.eclipse.emf.mwe2.launch.runtime.Mwe2Launcher"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="com.minres.uarchdsl.GenerateUArchDsl"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="com.minres.uarchdsl"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xmx512m"/>
+</launchConfiguration>

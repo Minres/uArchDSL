@@ -1,0 +1,78 @@
+grammar com.minres.uarchdsl.UArchDsl with org.eclipse.xtext.common.Terminals
+
+generate uArchDsl "http://www.minres.com/uarchdsl/UArchDsl"
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+import "http://www.minres.com/coredsl/CoreDsl/2.0" as coreDsl
+
+Model:
+	(imports+=Import)*
+	ResourceKindDecl?
+	ResourceSets?
+	definitions+=MicroArchDef+
+	;
+
+Import
+	: 'import' importURI=STRING
+	;
+
+///////////////////////////////////////////////////////////////////////////////
+// Resource extension 
+fragment ResourceKindDecl:
+	'ResourceKind' '{' kinds+=ResourceKind+'}'
+;
+
+ResourceKind:
+	name=ID '{' time+=TimedResource ('|' time+=TimedResource)* '}'
+;
+
+TimedResource:
+	name=ID ('(' ti=INT ')')?
+;
+
+fragment ResourceSets:
+	'ResourceSets' '{' sets+=ResourceSet+'}'
+;
+
+ResourceSet:
+	name=ID '{' resources+=Resource ('|' resources+=Resource)* '}'
+;
+
+Resource:
+	name=ID
+;
+
+ResourceElement:
+	ResourceKind | TimedResource | ResourceSet | Resource
+;
+//
+///////////////////////////////////////////////////////////////////////////////
+
+MicroArchDef:
+	'uArch' name=ID 'of' core=[coreDsl::CoreDef] '{'
+	    resource=ResourcesAssignments?
+        pipelines+=PipelineDefinition*
+	 '}'
+;
+
+///////////////////////////////////////////////////////////////////////////////
+// Resource extension per CoreDef
+ResourcesAssignments:
+	'resources' '{' groups+=InstructionGroup+'}'
+;
+
+InstructionGroup: 
+	 (special=('[*]' | '[ALL]') | (ins+=[coreDsl::Instruction] (',' ins+=[coreDsl::Instruction])*)) '{'
+		resources+=[ResourceElement] ('|' resources+=[ResourceElement])* '}'
+;
+
+PipelineDefinition:	 
+	'pipeline' name=ID '{' stages+=Stage+ '}'
+;
+
+Stage:
+	name=ID '{' resources+=[ResourceElement] ('|' resources+=[ResourceElement])* '}'
+;
+//
+///////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: com.minres.uarchdsl
+Bundle-ManifestVersion: 2
+Bundle-Name: com.minres.uarchdsl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: com.minres.uarchdsl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: com.minres.coredsl;bundle-version="2.0.1",
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: com.minres.uarchdsl.generator,
+ com.minres.uarchdsl,
+ com.minres.uarchdsl.uArchDsl.impl,
+ com.minres.uarchdsl.parser.antlr.internal,
+ com.minres.uarchdsl.serializer,
+ com.minres.uarchdsl.uArchDsl.util,
+ com.minres.uarchdsl.parser.antlr,
+ com.minres.uarchdsl.uArchDsl,
+ com.minres.uarchdsl.validation,
+ com.minres.uarchdsl.services,
+ com.minres.uarchdsl.scoping
+Import-Package: org.apache.log4j

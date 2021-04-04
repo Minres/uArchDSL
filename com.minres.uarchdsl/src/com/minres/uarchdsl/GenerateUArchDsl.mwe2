@@ -51,6 +51,7 @@ Workflow {
 				debugGrammar=true
 			}
 			generator = {
+				generateStub = false
 				generateXtendStub = true
 			}
 			junitSupport = {
